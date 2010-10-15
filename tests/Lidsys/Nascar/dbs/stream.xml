@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dataset>
+	<table name="nascarSeries">
+		<column>seriesId</column>
+		<column>keyname</column>
+		<column>name</column>
+		<column>shortName</column>
+		<column>feedName</column>
+
+		<row>
+			<value><![CDATA[1]]></value>
+			<value><![CDATA[cup]]></value>
+			<value><![CDATA[Sprint Cup]]></value>
+			<value><![CDATA[Cup]]></value>
+			<value><![CDATA[nascar_cup]]></value>
+		</row>
+
+		<row>
+			<value><![CDATA[2]]></value>
+			<value><![CDATA[national]]></value>
+			<value><![CDATA[Nationwide]]></value>
+			<value><![CDATA[Nationwide]]></value>
+			<value><![CDATA[nascar_national]]></value>
+		</row>
+
+		<row>
+			<value><![CDATA[3]]></value>
+			<value><![CDATA[truck]]></value>
+			<value><![CDATA[Camping World Truck]]></value>
+			<value><![CDATA[Truck]]></value>
+			<value><![CDATA[nascar_truck]]></value>
+		</row>
+	</table>
+</dataset>
