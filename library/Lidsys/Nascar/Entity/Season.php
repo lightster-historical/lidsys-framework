@@ -247,4 +247,20 @@ extends Mephex_Model_Entity
 	{
 		return $this->getId();
 	}
+	
+	
+	
+	/**
+	 * Determines if the property of the given name is allowed
+	 * to be set to a reference.
+	 * 
+	 * @param bool $name
+	 */
+	protected function isReferencedPropertyAllowed($name)
+	{
+		return ($name === 'series'
+			? true
+			: parent::isReferencedPropertyAllowed($name)
+		);
+	}
 }

@@ -62,6 +62,24 @@ extends Lidsys_Test_TestCase
 	
 	
 	
+	public function testSeriesCanBeSetByReference()
+	{
+		$group	= new Stub_Mephex_Model_Accessor_Group();
+		
+		$reference	= new Mephex_Model_Entity_Reference(
+			new Stub_Mephex_Model_Accessor_Reader(
+				$group,
+				new Stub_Mephex_Model_Mapper($group),
+				new Stub_Mephex_Model_Cache(),
+				new Stub_Mephex_Model_Stream_Reader()
+			),
+			new Mephex_Model_Criteria_Array(array('seriesId' => 1))
+		);
+		$this->_season->setReferencedProperty('series', $reference);
+	}
+	
+	
+	
 	public function testYearCanBeStoredAndRetrieved()
 	{
 		$year	= 2010;
@@ -183,56 +201,6 @@ extends Lidsys_Test_TestCase
 	{
 		$this->assertTrue($this->_season === $this->_season->setMaxPickCount(5));
 	}
-	
-	
-	
-	/*
-	public function testTextColorCanBeStoredAndRetrieved()
-	{
-		$color	= 'color';
-		$this->_driver->setTextColor($color);
-		$this->assertEquals($color, $this->_driver->getTextColor());
-	}
-	
-	
-	
-	public function testTextColorSetterReturnsOwnerObject()
-	{
-		$this->assertTrue($this->_driver === $this->_driver->setTextColor('color'));
-	}
-	
-	
-	
-	public function testBackgroundColorCanBeStoredAndRetrieved()
-	{
-		$color	= 'Background';
-		$this->_driver->setBackgroundColor($color);
-		$this->assertEquals($color, $this->_driver->getBackgroundColor());
-	}
-	
-	
-	
-	public function testBackgroundColorSetterReturnsOwnerObject()
-	{
-		$this->assertTrue($this->_driver === $this->_driver->setBackgroundColor('bgcolor'));
-	}
-	
-	
-	
-	public function testBorderColorCanBeStoredAndRetrieved()
-	{
-		$color	= 'border';
-		$this->_driver->setBorderColor($color);
-		$this->assertEquals($color, $this->_driver->getBorderColor());
-	}
-	
-	
-	
-	public function testBorderColorSetterReturnsOwnerObject()
-	{
-		$this->assertTrue($this->_driver === $this->_driver->setBorderColor('border'));
-	}
-	*/
 	
 	
 	
