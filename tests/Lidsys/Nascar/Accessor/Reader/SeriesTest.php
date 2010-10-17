@@ -2,7 +2,7 @@
 
 
 
-class Lidsys_Nascar_Accessor_ReaderSeriesTest
+class Lidsys_Nascar_Accessor_Reader_SeriesTest
 extends Lidsys_Test_TestCase
 {
 	protected $_group;
