@@ -1,5 +1,120 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <dataset>
+	<table name="nascarDriver">
+		<column>driverId</column>
+		<column>firstName</column>
+		<column>lastName</column>
+		<column>color</column>
+		<column>background</column>
+		<column>border</column>
+
+		<row>
+			<value><![CDATA[1]]></value>
+			<value><![CDATA[Jamie]]></value>
+			<value><![CDATA[McMurray]]></value>
+			<value><![CDATA[black]]></value>
+			<value><![CDATA[orange]]></value>
+			<value><![CDATA[yellow]]></value>
+		</row>
+
+		<row>
+			<value><![CDATA[24]]></value>
+			<value><![CDATA[Jeff]]></value>
+			<value><![CDATA[Gordon]]></value>
+			<value><![CDATA[gold]]></value>
+			<value><![CDATA[navy]]></value>
+			<value><![CDATA[red]]></value>
+		</row>
+	</table>
+	<table name="nascarSeason">
+		<column>seasonId</column>
+		<column>seriesId</column>
+		<column>year</column>
+		<column>relationTitle</column>
+		<column>maxPickCount</column>
+		<column>chaseRaceNo</column>
+		<column>chaseDriverCount</column>
+
+		<row>
+			<value><![CDATA[1]]></value>
+			<value><![CDATA[1]]></value>
+			<value><![CDATA[2007]]></value>
+			<value><![CDATA[2007 Cup]]></value>
+			<value><![CDATA[5]]></value>
+			<value><![CDATA[26]]></value>
+			<value><![CDATA[12]]></value>
+		</row>
+
+		<row>
+			<value><![CDATA[2]]></value>
+			<value><![CDATA[1]]></value>
+			<value><![CDATA[2008]]></value>
+			<value><![CDATA[2008 Cup]]></value>
+			<value><![CDATA[5]]></value>
+			<value><![CDATA[26]]></value>
+			<value><![CDATA[12]]></value>
+		</row>
+
+		<row>
+			<value><![CDATA[3]]></value>
+			<value><![CDATA[1]]></value>
+			<value><![CDATA[2009]]></value>
+			<value><![CDATA[2009 Cup]]></value>
+			<value><![CDATA[5]]></value>
+			<value><![CDATA[26]]></value>
+			<value><![CDATA[12]]></value>
+		</row>
+
+		<row>
+			<value><![CDATA[4]]></value>
+			<value><![CDATA[2]]></value>
+			<value><![CDATA[2009]]></value>
+			<value><![CDATA[2009 Nationwide]]></value>
+			<value><![CDATA[3]]></value>
+			<value><![CDATA[0]]></value>
+			<value><![CDATA[0]]></value>
+		</row>
+
+		<row>
+			<value><![CDATA[5]]></value>
+			<value><![CDATA[3]]></value>
+			<value><![CDATA[2009]]></value>
+			<value><![CDATA[2009 Truck]]></value>
+			<value><![CDATA[2]]></value>
+			<value><![CDATA[0]]></value>
+			<value><![CDATA[0]]></value>
+		</row>
+
+		<row>
+			<value><![CDATA[6]]></value>
+			<value><![CDATA[1]]></value>
+			<value><![CDATA[2010]]></value>
+			<value><![CDATA[2010 Cup]]></value>
+			<value><![CDATA[5]]></value>
+			<value><![CDATA[26]]></value>
+			<value><![CDATA[12]]></value>
+		</row>
+
+		<row>
+			<value><![CDATA[7]]></value>
+			<value><![CDATA[2]]></value>
+			<value><![CDATA[2010]]></value>
+			<value><![CDATA[2010 Nationwide]]></value>
+			<value><![CDATA[4]]></value>
+			<value><![CDATA[0]]></value>
+			<value><![CDATA[0]]></value>
+		</row>
+
+		<row>
+			<value><![CDATA[8]]></value>
+			<value><![CDATA[3]]></value>
+			<value><![CDATA[2010]]></value>
+			<value><![CDATA[2010 Truck]]></value>
+			<value><![CDATA[3]]></value>
+			<value><![CDATA[0]]></value>
+			<value><![CDATA[0]]></value>
+		</row>
+	</table>
 	<table name="nascarSeries">
 		<column>seriesId</column>
 		<column>keyname</column>
@@ -29,6 +144,364 @@
 			<value><![CDATA[Camping World Truck]]></value>
 			<value><![CDATA[Truck]]></value>
 			<value><![CDATA[nascar_truck]]></value>
+		</row>
+	</table>
+	<table name="nascarTrack">
+		<column>trackId</column>
+		<column>name</column>
+		<column>shortName</column>
+		<column>location</column>
+		<column>length</column>
+
+		<row>
+			<value><![CDATA[1]]></value>
+			<value><![CDATA[Atlanta Motor Speedway]]></value>
+			<value><![CDATA[Atlanta]]></value>
+			<value><![CDATA[Hampton, GA]]></value>
+			<value><![CDATA[1.54]]></value>
+		</row>
+
+		<row>
+			<value><![CDATA[2]]></value>
+			<value><![CDATA[Bristol Motor Speedway]]></value>
+			<value><![CDATA[Bristol]]></value>
+			<value><![CDATA[Bristol, TN]]></value>
+			<value><![CDATA[0.533]]></value>
+		</row>
+
+		<row>
+			<value><![CDATA[3]]></value>
+			<value><![CDATA[Lowe's Motor Speedway]]></value>
+			<value><![CDATA[Lowe's]]></value>
+			<value><![CDATA[Concord, NC]]></value>
+			<value><![CDATA[1.5]]></value>
+		</row>
+
+		<row>
+			<value><![CDATA[4]]></value>
+			<value><![CDATA[Chicagoland Speedway]]></value>
+			<value><![CDATA[Chicagoland]]></value>
+			<value><![CDATA[Joliet, IL]]></value>
+			<value><![CDATA[1.5]]></value>
+		</row>
+
+		<row>
+			<value><![CDATA[5]]></value>
+			<value><![CDATA[Darlington Raceway]]></value>
+			<value><![CDATA[Darlington]]></value>
+			<value><![CDATA[Darlington, SC]]></value>
+			<value><![CDATA[1.366]]></value>
+		</row>
+
+		<row>
+			<value><![CDATA[6]]></value>
+			<value><![CDATA[Daytona International Speedway]]></value>
+			<value><![CDATA[Daytona]]></value>
+			<value><![CDATA[Daytona Beach, FL]]></value>
+			<value><![CDATA[2.5]]></value>
+		</row>
+
+		<row>
+			<value><![CDATA[7]]></value>
+			<value><![CDATA[Dover International Speedway]]></value>
+			<value><![CDATA[Dover]]></value>
+			<value><![CDATA[Dover, DE]]></value>
+			<value><![CDATA[1]]></value>
+		</row>
+
+		<row>
+			<value><![CDATA[8]]></value>
+			<value><![CDATA[California Speedway]]></value>
+			<value><![CDATA[California]]></value>
+			<value><![CDATA[Fontana, CA]]></value>
+			<value><![CDATA[2]]></value>
+		</row>
+
+		<row>
+			<value><![CDATA[9]]></value>
+			<value><![CDATA[Homestead-Miami Speedway]]></value>
+			<value><![CDATA[Homestead-Miami]]></value>
+			<value><![CDATA[Homestead, FL]]></value>
+			<value><![CDATA[1.5]]></value>
+		</row>
+
+		<row>
+			<value><![CDATA[10]]></value>
+			<value><![CDATA[Indianapolis Motor Speedway]]></value>
+			<value><![CDATA[Indianapolis]]></value>
+			<value><![CDATA[Speedway, IN]]></value>
+			<value><![CDATA[2.5]]></value>
+		</row>
+
+		<row>
+			<value><![CDATA[11]]></value>
+			<value><![CDATA[O'Reilly Raceway Park]]></value>
+			<value><![CDATA[ORP]]></value>
+			<value><![CDATA[Indianapolis, IN]]></value>
+			<value><![CDATA[0.686]]></value>
+		</row>
+
+		<row>
+			<value><![CDATA[12]]></value>
+			<value><![CDATA[Kansas Speedway]]></value>
+			<value><![CDATA[Kansas]]></value>
+			<value><![CDATA[Kansas City, KS]]></value>
+			<value><![CDATA[1.5]]></value>
+		</row>
+
+		<row>
+			<value><![CDATA[13]]></value>
+			<value><![CDATA[Kentucky Speedway]]></value>
+			<value><![CDATA[Kentucky]]></value>
+			<value><![CDATA[Sparta, KY]]></value>
+			<value><![CDATA[1.5]]></value>
+		</row>
+
+		<row>
+			<value><![CDATA[14]]></value>
+			<value><![CDATA[Las Vegas Motor Speedway]]></value>
+			<value><![CDATA[Las Vegas]]></value>
+			<value><![CDATA[Las Vegas, NV]]></value>
+			<value><![CDATA[1.5]]></value>
+		</row>
+
+		<row>
+			<value><![CDATA[15]]></value>
+			<value><![CDATA[Gateway International Raceway]]></value>
+			<value><![CDATA[Gateway]]></value>
+			<value><![CDATA[Madison, IL]]></value>
+			<value><![CDATA[1.25]]></value>
+		</row>
+
+		<row>
+			<value><![CDATA[16]]></value>
+			<value><![CDATA[Mansfield Motorsports Park]]></value>
+			<value><![CDATA[Mansfield]]></value>
+			<value><![CDATA[Mansfield, Ohio]]></value>
+			<value><![CDATA[0.5]]></value>
+		</row>
+
+		<row>
+			<value><![CDATA[17]]></value>
+			<value><![CDATA[Martinsville Speedway]]></value>
+			<value><![CDATA[Martinsville]]></value>
+			<value><![CDATA[Martinsville, VA]]></value>
+			<value><![CDATA[0.526]]></value>
+		</row>
+
+		<row>
+			<value><![CDATA[18]]></value>
+			<value><![CDATA[Memphis Motorsports Park]]></value>
+			<value><![CDATA[Memphis]]></value>
+			<value><![CDATA[Memphis, TN]]></value>
+			<value><![CDATA[0.75]]></value>
+		</row>
+
+		<row>
+			<value><![CDATA[19]]></value>
+			<value><![CDATA[Autodromo Hermanos Rodriguez]]></value>
+			<value><![CDATA[Mexico]]></value>
+			<value><![CDATA[Mexico City, Mexico]]></value>
+			<value><![CDATA[2.518]]></value>
+		</row>
+
+		<row>
+			<value><![CDATA[20]]></value>
+			<value><![CDATA[Michigan International Speedway]]></value>
+			<value><![CDATA[Michigan]]></value>
+			<value><![CDATA[Brooklyn, MI]]></value>
+			<value><![CDATA[2]]></value>
+		</row>
+
+		<row>
+			<value><![CDATA[21]]></value>
+			<value><![CDATA[Milwaukee Mile]]></value>
+			<value><![CDATA[Milwaukee]]></value>
+			<value><![CDATA[West Allis, WI]]></value>
+			<value><![CDATA[1]]></value>
+		</row>
+
+		<row>
+			<value><![CDATA[22]]></value>
+			<value><![CDATA[Circuit Gilles Villeneuve]]></value>
+			<value><![CDATA[Montreal]]></value>
+			<value><![CDATA[Montreal, Quebec]]></value>
+			<value><![CDATA[2.71]]></value>
+		</row>
+
+		<row>
+			<value><![CDATA[23]]></value>
+			<value><![CDATA[Nashville Superspeedway]]></value>
+			<value><![CDATA[Nashville]]></value>
+			<value><![CDATA[Lebanon, TN]]></value>
+			<value><![CDATA[1.333]]></value>
+		</row>
+
+		<row>
+			<value><![CDATA[24]]></value>
+			<value><![CDATA[New Hampshire International Speedway]]></value>
+			<value><![CDATA[New Hampshire]]></value>
+			<value><![CDATA[Loudon, NH]]></value>
+			<value><![CDATA[1.058]]></value>
+		</row>
+
+		<row>
+			<value><![CDATA[25]]></value>
+			<value><![CDATA[Phoenix International Raceway]]></value>
+			<value><![CDATA[Phoenix]]></value>
+			<value><![CDATA[Avondale, AZ]]></value>
+			<value><![CDATA[1]]></value>
+		</row>
+
+		<row>
+			<value><![CDATA[26]]></value>
+			<value><![CDATA[Pocono Raceway]]></value>
+			<value><![CDATA[Pocono]]></value>
+			<value><![CDATA[Long Pond, PA]]></value>
+			<value><![CDATA[2.5]]></value>
+		</row>
+
+		<row>
+			<value><![CDATA[27]]></value>
+			<value><![CDATA[Richmond International Raceway]]></value>
+			<value><![CDATA[Richmond]]></value>
+			<value><![CDATA[Richmond, VA]]></value>
+			<value><![CDATA[0.75]]></value>
+		</row>
+
+		<row>
+			<value><![CDATA[28]]></value>
+			<value><![CDATA[Infineon Raceway]]></value>
+			<value><![CDATA[Infineon]]></value>
+			<value><![CDATA[Sonoma, CA]]></value>
+			<value><![CDATA[1.99]]></value>
+		</row>
+
+		<row>
+			<value><![CDATA[29]]></value>
+			<value><![CDATA[Talladega Superspeedway]]></value>
+			<value><![CDATA[Talladega]]></value>
+			<value><![CDATA[Talladega, AL]]></value>
+			<value><![CDATA[2.66]]></value>
+		</row>
+
+		<row>
+			<value><![CDATA[30]]></value>
+			<value><![CDATA[Texas Motor Speedway]]></value>
+			<value><![CDATA[Texas]]></value>
+			<value><![CDATA[Fort Worth, TX]]></value>
+			<value><![CDATA[1.5]]></value>
+		</row>
+
+		<row>
+			<value><![CDATA[31]]></value>
+			<value><![CDATA[Watkins Glen International]]></value>
+			<value><![CDATA[Watkins Glen]]></value>
+			<value><![CDATA[Watkins Glen International, NY]]></value>
+			<value><![CDATA[2.45]]></value>
+		</row>
+
+		<row>
+			<value><![CDATA[32]]></value>
+			<value><![CDATA[North Carolina Speedway]]></value>
+			<value><![CDATA[North Carolina]]></value>
+			<value><![CDATA[Rockingham, NC]]></value>
+			<value><![CDATA[1.017]]></value>
+		</row>
+
+		<row>
+			<value><![CDATA[33]]></value>
+			<value><![CDATA[North Wilkesboro Speedway]]></value>
+			<value><![CDATA[North Wilkesboro]]></value>
+			<value><![CDATA[North Wilkesboro, North Carolina]]></value>
+			<value><![CDATA[0.625]]></value>
+		</row>
+
+		<row>
+			<value><![CDATA[34]]></value>
+			<value><![CDATA[Riverside International Raceway]]></value>
+			<value><![CDATA[Riverside]]></value>
+			<value><![CDATA[Moreno Valley, CA]]></value>
+			<value><![CDATA[2.62]]></value>
+		</row>
+
+		<row>
+			<value><![CDATA[35]]></value>
+			<value><![CDATA[Nashville Speedway USA]]></value>
+			<value><![CDATA[Nashville]]></value>
+			<value><![CDATA[Nashville, TN]]></value>
+			<value><![CDATA[0]]></value>
+		</row>
+
+		<row>
+			<value><![CDATA[36]]></value>
+			<value><![CDATA[Texas World Speedway]]></value>
+			<value><![CDATA[Texas World]]></value>
+			<value><![CDATA[College Station, TX]]></value>
+			<value><![CDATA[2]]></value>
+		</row>
+
+		<row>
+			<value><![CDATA[37]]></value>
+			<value><![CDATA[Ontario Motor Speedway]]></value>
+			<value><![CDATA[Ontario]]></value>
+			<value><![CDATA[Ontario, Calif.]]></value>
+			<value><![CDATA[2.5]]></value>
+		</row>
+
+		<row>
+			<value><![CDATA[38]]></value>
+			<value><![CDATA[Iowa Speedway]]></value>
+			<value><![CDATA[Iowa]]></value>
+			<value><![CDATA[Newton, IA]]></value>
+			<value><![CDATA[0.875]]></value>
+		</row>
+
+		<row>
+			<value><![CDATA[39]]></value>
+			<value><![CDATA[Road America]]></value>
+			<value><![CDATA[Road America]]></value>
+			<value><![CDATA[Elkhart Lake, WI]]></value>
+			<value><![CDATA[4.048]]></value>
+		</row>
+	</table>
+	<table name="nascarTvStation">
+		<column>stationId</column>
+		<column>name</column>
+
+		<row>
+			<value><![CDATA[1]]></value>
+			<value><![CDATA[ABC]]></value>
+		</row>
+
+		<row>
+			<value><![CDATA[2]]></value>
+			<value><![CDATA[NBC]]></value>
+		</row>
+
+		<row>
+			<value><![CDATA[3]]></value>
+			<value><![CDATA[FOX]]></value>
+		</row>
+
+		<row>
+			<value><![CDATA[4]]></value>
+			<value><![CDATA[TNT]]></value>
+		</row>
+
+		<row>
+			<value><![CDATA[5]]></value>
+			<value><![CDATA[ESPN]]></value>
+		</row>
+
+		<row>
+			<value><![CDATA[6]]></value>
+			<value><![CDATA[ESPN2]]></value>
+		</row>
+
+		<row>
+			<value><![CDATA[7]]></value>
+			<value><![CDATA[SPEED]]></value>
 		</row>
 	</table>
 </dataset>
