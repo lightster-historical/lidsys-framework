@@ -39,7 +39,7 @@ extends Lidsys_Test_TestCase
 	
 	public function testGetSeriesByKeyName()
 	{
-		$iter	= $this->_istream->read(new Mephex_Model_Criteria_Array(array('keyname' => 'national')));
+		$iter	= $this->_istream->read(new Mephex_Model_Criteria_Array(array('keyName' => 'national')));
 		$iter->rewind();
 		$series	= $iter->current();
 		

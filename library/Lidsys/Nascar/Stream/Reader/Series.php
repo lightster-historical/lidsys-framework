@@ -57,7 +57,7 @@ extends Mephex_Model_Stream_Reader_Database
 		if(null === $this->_query_keyname)
 		{
 			$this->_query_keyname	= $this->getConnection()->read(
-				"SELECT * FROM {$this->getTable('Series')} WHERE keyName = ?",
+				"SELECT * FROM {$this->getTable('Series')} WHERE keyname = ?",
 				Mephex_Db_Sql_Base_Query::PREPARE_NATIVE
 			);
 		}
@@ -82,9 +82,9 @@ extends Mephex_Model_Stream_Reader_Database
 			$query	= $this->getIdQuery();
 			return $query->execute($params = array($id));
 		}
-		else if($criteria->hasCriteriaFields(array('keyname')))
+		else if($criteria->hasCriteriaFields(array('keyName')))
 		{
-			$keyName	= $criteria->getCriteriaValue('keyname');
+			$keyName	= $criteria->getCriteriaValue('keyName');
 			$query		= $this->getKeyNameQuery();
 			return $query->execute($params = array($keyName));
 		}

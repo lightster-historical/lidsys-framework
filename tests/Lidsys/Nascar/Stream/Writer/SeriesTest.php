@@ -61,7 +61,7 @@ extends Lidsys_Test_TestCase
 		);
 		$this->_ostream->write($series);
 		
-		$iter	= $this->_istream->read(new Mephex_Model_Criteria_Array(array('keyname' => 'modified')));
+		$iter	= $this->_istream->read(new Mephex_Model_Criteria_Array(array('keyName' => 'modified')));
 		$iter->rewind();
 		$read	= $iter->current();
 

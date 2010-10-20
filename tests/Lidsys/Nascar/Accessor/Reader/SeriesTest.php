@@ -9,6 +9,7 @@ extends Lidsys_Test_TestCase
 	protected $_mapper;
 	protected $_cache;
 	protected $_stream;
+	
 	protected $_reader;
 	
 	
@@ -37,5 +38,31 @@ extends Lidsys_Test_TestCase
 	
 	public function testReaderAccessorCanBeInitialized()
 	{
+	}
+	
+
+	
+	public function testSeriesCanBeReadById()
+	{
+		$entity	= $this->_reader->read(new Mephex_Model_Criteria_Array(array('id' => 1)));
+		
+		$this->assertEquals('1',					$entity->getId());
+		$this->assertEquals('cup',					$entity->getKeyName());
+		$this->assertEquals('Sprint Cup',			$entity->getTitle());
+		$this->assertEquals('Cup',					$entity->getShortTitle());
+//		$this->assertEquals('nascar_cup',			$series['feedName']);
+	}
+	
+
+	
+	public function testSeriesCanBeReadByKeyName()
+	{
+		$entity	= $this->_reader->read(new Mephex_Model_Criteria_Array(array('keyName' => 'national')));
+		
+		$this->assertEquals('2',					$entity->getId());
+		$this->assertEquals('national',				$entity->getKeyName());
+		$this->assertEquals('Nationwide',			$entity->getTitle());
+		$this->assertEquals('Nationwide',			$entity->getShortTitle());
+//		$this->assertEquals('nascar_cup',			$series['feedName']);
 	}
 }
