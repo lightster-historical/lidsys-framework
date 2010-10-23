@@ -75,6 +75,22 @@ extends Lidsys_Test_TestCase
 	
 	
 	
+	public function testLocationCanBeStoredAndRetrieved()
+	{
+		$location	= 'San Bernardino, CA';
+		$this->_track->setLocation($location);
+		$this->assertEquals($location, $this->_track->getLocation());
+	}
+	
+	
+	
+	public function testLocationSetterReturnsOwnerObject()
+	{
+		$this->assertTrue($this->_track === $this->_track->setLocation('San Bernardino, CA'));
+	}
+	
+	
+	
 	public function testLengthCanBeStoredAndRetrieved()
 	{
 		$length	= 2.66;

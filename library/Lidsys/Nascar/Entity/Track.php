@@ -32,6 +32,13 @@ extends Mephex_Model_Entity
 	protected $shortName;
 	
 	/**
+	 * The location of the track.
+	 * 
+	 * @var string
+	 */
+	protected $location;
+	
+	/**
 	 * The length of the track, in miles.
 	 * 
 	 * @var float
@@ -111,6 +118,31 @@ extends Mephex_Model_Entity
 	public function setShortName($shortName)
 	{
 		return $this->setProperty('shortName', $shortName);
+	}
+
+	
+	
+	/**
+	 * Getter for location.
+	 * 
+	 * @return string
+	 */
+	public function getLocation()
+	{
+		return $this->getProperty('location');
+	}
+	
+	
+	
+	/**
+	 * Setter for location.
+	 * 
+	 * @param string
+	 * @return $this
+	 */
+	public function setLocation($location)
+	{
+		return $this->setProperty('location', $location);
 	}
 
 	
