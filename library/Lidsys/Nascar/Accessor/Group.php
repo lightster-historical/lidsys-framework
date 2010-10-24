@@ -48,6 +48,7 @@ extends Mephex_Model_Accessor_Group
 	 */
 	protected function init()
 	{
+		$this->registerSeries();
 	}
 	
 	
@@ -72,5 +73,60 @@ extends Mephex_Model_Accessor_Group
 	protected function getDbTableSet()
 	{
 		return $this->_db_table_set;
+	}
+	
+	
+	
+	/**
+	 * Registers Series cache and accessors.
+	 * 
+	 * @return void
+	 */
+	protected function registerSeries()
+	{
+		$mapper	= new Lidsys_Nascar_Mapper_Series($this);
+		
+		$cache	= new Lidsys_Nascar_Cache_Series();
+		$this->registerCache('Series', $cache);
+		
+		$this->registerAccessor(
+			'Series', 
+			new Lidsys_Nascar_Accessor_Reader_Series
+			(
+				$this,
+				$mapper, 
+				$cache,
+				new Lidsys_Nascar_Stream_Reader_Series(
+					$this->getDbConnection(),
+					$this->getDbTableSet()
+				)
+			)
+		);
+	}
+	
+	
+	
+	/**
+	 * Retrieves the series entity that meets the given criteria.
+	 * 
+	 * @param Mephex_Model_Criteria $criteria
+	 * @return Lidsys_Nascar_Entity_Series
+	 */
+	public function getSeries(Mephex_Model_Criteria $criteria)
+	{
+		return $this->getReader('Series')->read($criteria);
+	}
+	
+	
+	
+	/**
+	 * Retrieves a reference to the series entity that meets the given criteria.
+	 * 
+	 * @param Mephex_Model_Criteria $criteria
+	 * @return Mephex_Model_Entity_Reference
+	 */
+	public function getSeriesReference(Mephex_Model_Criteria $criteria)
+	{
+		return $this->getReference('Series', $criteria);
 	}
 }

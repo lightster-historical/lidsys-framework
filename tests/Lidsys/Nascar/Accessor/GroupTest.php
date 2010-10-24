@@ -45,4 +45,52 @@ extends Lidsys_Test_TestCase
 		$group	= new Stub_Lidsys_Nascar_Accessor_Group($this->_db_conn);
 		$this->assertTrue($group->getDbTableSet() instanceof Mephex_Db_TableSet);
 	}
+	
+	
+	
+	public function testSeriesCacheIsRegistered()
+	{
+		$this->assertTrue(
+			$this->_group->getCache('Series')
+			instanceof Lidsys_Nascar_Cache_Series
+		);
+	}
+	
+	
+	
+	public function testSeriesReaderIsRegistered()
+	{
+		$this->assertTrue(
+			$this->_group->getReader('Series')
+			instanceof Lidsys_Nascar_Accessor_Reader_Series
+		);
+	}
+	
+
+	
+	public function testSeriesCanBeRead()
+	{
+		$entity	= $this->_group->getSeries(new Mephex_Model_Criteria_Array(array('id' => 1)));
+		
+		$this->assertEquals('1',					$entity->getId());
+		$this->assertEquals('cup',					$entity->getKeyName());
+		$this->assertEquals('Sprint Cup',			$entity->getTitle());
+		$this->assertEquals('Cup',					$entity->getShortTitle());
+//		$this->assertEquals('nascar_cup',			$series['feedName']);
+	}
+	
+
+	
+	public function testSeriesReferenceCanBeRead()
+	{
+		$reference	= $this->_group->getSeriesReference(new Mephex_Model_Criteria_Array(array('keyName' => 'national')));
+		$this->assertTrue($reference instanceof Mephex_Model_Entity_Reference);
+		
+		$entity		= $reference->getEntity();
+		
+		$this->assertEquals('2',					$entity->getId());
+		$this->assertEquals('national',				$entity->getKeyName());
+		$this->assertEquals('Nationwide',			$entity->getTitle());
+		$this->assertEquals('Nationwide',			$entity->getShortTitle());
+	}
 }
