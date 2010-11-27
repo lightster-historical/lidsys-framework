@@ -9,105 +9,59 @@
  * @author mlight
  */
 class Lidsys_Nascar_Stream_Writer_Series
-extends Mephex_Model_Stream_Writer_Database
+extends Mephex_Model_Stream_Writer_Database_InsertUpdate
 {
 	/**
-	 * Lazy-loaded prepared query for inserting a series record.
+	 * Generates the default insert generator.
 	 * 
-	 * @var Mephex_Db_Base_Query
+	 * @return Mephex_Db_Sql_Base_Generator_Insert
 	 */
-	protected $_query_insert	= null;
-	
-	/**
-	 * Lazy-loaded prepared query for updating a series record.
-	 * 
-	 * @var Mephex_Db_Base_Query
-	 */
-	protected $_query_update	= null;
-	
-	
-	
-	/**
-	 * Lazy-loads a prepared query for inserting a series record.
-	 * 
-	 * @return Mephex_Db_Base_Query
-	 */
-	protected function getInsertQuery()
+	protected function getDefaultInsertGenerator()
 	{
-		if(null === $this->_query_insert)
-		{
-			$insert		= new Mephex_Db_Sql_Base_Insert(
-				$this->getTable('Series'), 
-				array(
-					'keyname',
-					'name',
-					'shortName',
-					'feedName'
-				)
-			);
-			$this->_query_insert	= $this->getConnection()->write(
-				$insert->getSql(),
-				Mephex_Db_Sql_Base_Query::PREPARE_NATIVE
-			);
-		}
-		
-		return $this->_query_insert;
+		return $this->getConnection()->generateInsert(
+			$this->getTable('Series'), 
+			array(
+				'keyname',
+				'name',
+				'shortName',
+				'feedName'
+			)
+		);
 	}
 	
 	
 	
 	/**
-	 * Lazy-loads a prepared query for updating a series record.
+	 * Generates the default update generator.
 	 * 
-	 * @return Mephex_Db_Base_Query
+	 * @return Mephex_Db_Sql_Base_Generator_Update
 	 */
-	protected function getUpdateQuery()
+	protected function getDefaultUpdateGenerator()
 	{
-		if(null === $this->_query_update)
-		{
-			$this->_query_update	= $this->getConnection()->write(
-				"	UPDATE {$this->getTable('Series')}
-					SET	keyname 	= ?,
-						name		= ?,
-						shortName	= ?,
-						feedName	= ?
-					WHERE seriesId	= ?
-				",
-				Mephex_Db_Sql_Base_Query::PREPARE_NATIVE
-			);
-		}
-		
-		return $this->_query_update;
+		return $this->getConnection()->generateUpdate(
+			$this->getTable('Series'), 
+			array(
+				'keyname',
+				'name',
+				'shortName',
+				'feedName'
+			),
+			array(
+				'seriesId'
+			)
+		);
 	}
 	
 	
 	
 	/**
-	 * Writes the given records.
+	 * Determines whether or not the record is a new record.
 	 * 
 	 * @param $data
-	 * @return bool 
+	 * @return bool
 	 */
-	public function write($data)
+	protected function isRecordNew($data)
 	{
-		if(isset($data['seriesId']))
-		{
-			return $this->getUpdateQuery()->execute($tmp = array(
-				$data['keyname'],
-				$data['name'],
-				$data['shortName'],
-				$data['feedName'],
-				$data['seriesId']
-			));
-		}			
-		else
-		{
-			return $this->getInsertQuery()->execute($tmp = array(
-				$data['keyname'],
-				$data['name'],
-				$data['shortName'],
-				$data['feedName']
-			));
-		}
+		return empty($data['seriesId']);
 	}
 }  
