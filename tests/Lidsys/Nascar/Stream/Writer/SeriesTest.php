@@ -59,13 +59,14 @@ extends Lidsys_Test_TestCase
 			'shortName'		=> 'Modified',
 			'feedName'		=> 'nascar_modified'
 		);
-		$this->_ostream->create($series);
+		$id	= $this->_ostream->create($series);
 		
 		$iter	= $this->_istream->read(new Mephex_Model_Criteria_Array(array('keyName' => 'modified')));
 		$iter->rewind();
 		$read	= $iter->current();
 
 		$this->assertTrue($read['seriesId'] > 0);
+		$this->assertEquals($id,					$read['seriesId']);
 		$this->assertEquals('modified',				$read['keyname']);
 		$this->assertEquals('Whelen Modified',		$read['name']);
 		$this->assertEquals('Modified',				$read['shortName']);
