@@ -36,7 +36,7 @@ extends Lidsys_Test_TestCase
 			'shortName'		=> 'Not Cup',
 			'feedName'		=> 'nascar_not_cup'
 		);
-		$this->_ostream->write($series);
+		$this->_ostream->update($series);
 		
 		$iter	= $this->_istream->read(new Mephex_Model_Criteria_Array(array('id' => 1)));
 		$iter->rewind();
@@ -59,7 +59,7 @@ extends Lidsys_Test_TestCase
 			'shortName'		=> 'Modified',
 			'feedName'		=> 'nascar_modified'
 		);
-		$this->_ostream->write($series);
+		$this->_ostream->create($series);
 		
 		$iter	= $this->_istream->read(new Mephex_Model_Criteria_Array(array('keyName' => 'modified')));
 		$iter->rewind();

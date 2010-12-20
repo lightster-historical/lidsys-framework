@@ -9,59 +9,44 @@
  * @author mlight
  */
 class Lidsys_Nascar_Stream_Writer_Series
-extends Mephex_Model_Stream_Writer_Database_InsertUpdate
+extends Mephex_Model_Stream_Writer_Database_SequentialId
 {
 	/**
-	 * Generates the default insert generator.
+	 * Getter for the table name.
 	 * 
-	 * @return Mephex_Db_Sql_Base_Generator_Insert
+	 * @return string
 	 */
-	protected function getDefaultInsertGenerator()
+	protected function getStorageTable()
 	{
-		return $this->getConnection()->generateInsert(
-			$this->getTable('Series'), 
-			array(
-				'keyname',
-				'name',
-				'shortName',
-				'feedName'
-			)
+		return $this->getTable('Series');
+	}
+	
+	
+	
+	/**
+	 * Getter for the array of field names (not including the sequential id field).
+	 * 
+	 * @return array
+	 */
+	protected function getStorageFields()
+	{
+		return array(
+			'keyname',
+			'name',
+			'shortName',
+			'feedName'
 		);
 	}
 	
 	
 	
 	/**
-	 * Generates the default update generator.
+	 * The name of the sequential id field.
 	 * 
-	 * @return Mephex_Db_Sql_Base_Generator_Update
+	 * @return string
 	 */
-	protected function getDefaultUpdateGenerator()
+	protected function getStorageSequentialIdField()
 	{
-		return $this->getConnection()->generateUpdate(
-			$this->getTable('Series'), 
-			array(
-				'keyname',
-				'name',
-				'shortName',
-				'feedName'
-			),
-			array(
-				'seriesId'
-			)
-		);
-	}
-	
-	
-	
-	/**
-	 * Determines whether or not the record is a new record.
-	 * 
-	 * @param $data
-	 * @return bool
-	 */
-	protected function isRecordNew($data)
-	{
-		return empty($data['seriesId']);
+		return 'seriesId';
 	}
 }  

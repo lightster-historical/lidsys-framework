@@ -9,7 +9,7 @@
  * @author mlight
  */
 class Lidsys_Nascar_Mapper_Series
-extends Mephex_Model_Mapper
+extends Mephex_Model_Mapper_SequentialId
 {
 	/**
 	 * Converts data from a storage system to a standardized
