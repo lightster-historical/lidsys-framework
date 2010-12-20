@@ -8,7 +8,7 @@ function bootstrap()
 
 	set_include_path(get_include_path() . PATH_SEPARATOR . PATH_TEST_ROOT);
 
-	define('ENV_USER', $_ENV['USER']);
+	define('ENV_USER', posix_getlogin());
 	
 	require_once 'Mephex/App/AutoLoader.php';
 	require_once 'Mephex/App/ClassLoader/PathOriented.php';
