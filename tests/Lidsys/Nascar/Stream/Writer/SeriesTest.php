@@ -46,7 +46,7 @@ extends Lidsys_Test_TestCase
 		$this->assertEquals('not_cup',				$read['keyname']);
 		$this->assertEquals('Not Sprint Cup',		$read['name']);
 		$this->assertEquals('Not Cup',				$read['shortName']);
-		$this->assertEquals('nascar_not_cup',		$read['feedName']);
+//		$this->assertEquals('nascar_not_cup',		$read['feedName']);
 	}
 	
 	
@@ -70,6 +70,6 @@ extends Lidsys_Test_TestCase
 		$this->assertEquals('modified',				$read['keyname']);
 		$this->assertEquals('Whelen Modified',		$read['name']);
 		$this->assertEquals('Modified',				$read['shortName']);
-		$this->assertEquals('nascar_modified',		$read['feedName']);
+//		$this->assertEquals('nascar_modified',		$read['feedName']);
 	}
 }

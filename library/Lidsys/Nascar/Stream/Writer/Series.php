@@ -34,7 +34,7 @@ extends Mephex_Model_Stream_Writer_Database_SequentialId
 			'keyname',
 			'name',
 			'shortName',
-			'feedName'
+//			'feedName'
 		);
 	}
 	
