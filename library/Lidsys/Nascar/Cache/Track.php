@@ -24,19 +24,6 @@ extends Mephex_Model_Cache
 	
 	
 	
-	/**
-	 * Forgets the given entity.
-	 * 
-	 * @param Mephex_Model_Entity $entity
-	 */
-	public function forget(Mephex_Model_Entity $entity)
-	{
-		$cache	= $this->getCache();
-		$cache->forget('id=' . $entity->getId());
-	}
-	
-	
-	
 	
 	/**
 	 * Generates a string key using the given criteria.
