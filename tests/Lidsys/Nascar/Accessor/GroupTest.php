@@ -78,19 +78,4 @@ extends Lidsys_Test_TestCase
 		$this->assertEquals('Cup',					$entity->getShortTitle());
 //		$this->assertEquals('nascar_cup',			$series['feedName']);
 	}
-	
-
-	
-	public function testSeriesReferenceCanBeRead()
-	{
-		$reference	= $this->_group->getSeriesReference(new Mephex_Model_Criteria_Array(array('keyName' => 'national')));
-		$this->assertTrue($reference instanceof Mephex_Model_Entity_Reference);
-		
-		$entity		= $reference->getEntity();
-		
-		$this->assertEquals('2',					$entity->getId());
-		$this->assertEquals('national',				$entity->getKeyName());
-		$this->assertEquals('Nationwide',			$entity->getTitle());
-		$this->assertEquals('Nationwide',			$entity->getShortTitle());
-	}
 }

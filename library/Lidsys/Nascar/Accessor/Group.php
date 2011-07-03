@@ -116,17 +116,4 @@ extends Mephex_Model_Accessor_Group
 	{
 		return $this->getReader('Series')->read($criteria);
 	}
-	
-	
-	
-	/**
-	 * Retrieves a reference to the series entity that meets the given criteria.
-	 * 
-	 * @param Mephex_Model_Criteria $criteria
-	 * @return Mephex_Model_Entity_Reference
-	 */
-	public function getSeriesReference(Mephex_Model_Criteria $criteria)
-	{
-		return $this->getReference('Series', $criteria);
-	}
 }
